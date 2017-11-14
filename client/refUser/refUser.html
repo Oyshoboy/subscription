@@ -1,0 +1,21 @@
+<template name="refUser">
+  <li class="">
+    <b>{{username}}</b> ref:<small>{{ref}}</small> self:<small>{{self}}</small> id: {{_id}}
+
+    {{#if hasRefals}}
+      <button class="js-click" >Subscription</button>
+    {{/if}}
+
+    {{#if isOpened}}
+      <button class="js-cancel" >Cancel</button>
+    {{/if}}
+
+      <ul>
+        {{#each nestedRefs}}
+          <li>
+              {{> refUser}}
+          </li>
+        {{/each}}
+      </ul>
+  </li>
+</template>

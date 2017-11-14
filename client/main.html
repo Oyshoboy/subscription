@@ -1,0 +1,22 @@
+<head>
+  <title>subscribe</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> loginButtons}}
+
+  {{> info}}
+</body>
+
+
+<template name="info">
+  <h2>Learn Meteor!</h2>
+
+  <ul>
+    {{#each refUsers}}
+      {{> refUser}}
+    {{/each}}
+  </ul>
+</template>
